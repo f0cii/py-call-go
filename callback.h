@@ -5,10 +5,10 @@
 extern "C"{
 #endif
 
-#ifdef __GNUC__
-#define EXPORT __attribute__((visibility("default")))
-#else
+#ifdef _WIN32
 #define EXPORT __declspec(dllexport)
+#else
+#define EXPORT __attribute__((visibility("default")))
 #endif
 
 // 回调函数原型
