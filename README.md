@@ -1,18 +1,14 @@
 # py-call-go
-Python 调用Go代码演示
+Python calling Go code demo
 
-步骤:
-
-1.编译go代码
-
-请确认安装了gcc(Msys2或者mingw-w64)，并且开启了CGO_ENABLED=1
+### Steps
+### 1.Compile the Go code
+Please make sure you have installed gcc (Msys2 or mingw-w64) and enabled CGO_ENABLED=1
 
 go build -buildmode=c-shared -o py-call-go.so .
 
-2.安装cffi包
-
+### 2.Install the cffi package
 pip install cffi
 
-3.运行python代码
-
+### 3.Run the Python code
 python py-call-go.py
