@@ -5,7 +5,11 @@
 extern "C"{
 #endif
 
+#ifdef __GNUC__
+#define EXPORT __attribute__((visibility("default")))
+#else
 #define EXPORT __declspec(dllexport)
+#endif
 
 // 回调函数原型
 typedef int (*callback_t)(char*);
