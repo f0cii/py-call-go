@@ -6,7 +6,7 @@ import cffi
 ffi = cffi.FFI()
 ffi.cdef("""
     int add(int left, int right);
-    char* s(const char* c);
+    char* hello(const char* c);
     void c_free(void *ptr);
     
     typedef int (*callback_t)(char*);
@@ -59,7 +59,7 @@ def call_c_function_return_str(c_function, c_args):
 # 生成 Python 的包装函数
 def hello(c):
     c_str = new_c_str(c)
-    result_str = call_c_function_return_str(lib.s, [c_str])
+    result_str = call_c_function_return_str(lib.hello, [c_str])
     with FFIRelease(c_str):
         return result_str
 

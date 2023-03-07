@@ -15,8 +15,8 @@ func add(left, right int) int {
 	return left + right
 }
 
-//export s
-func s(c *C.char) *C.char {
+//export hello
+func hello(c *C.char) *C.char {
 	_s := C.GoString(c)
 	log.Printf("%v\n", _s)
 

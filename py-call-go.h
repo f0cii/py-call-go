@@ -81,7 +81,7 @@ extern "C" {
 #endif
 
 extern __declspec(dllexport) GoInt add(GoInt left, GoInt right);
-extern __declspec(dllexport) char* s(char* c);
+extern __declspec(dllexport) char* hello(char* c);
 
 #ifdef __cplusplus
 }
